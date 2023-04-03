@@ -25,10 +25,17 @@ VIP uses the dependencies and scripts defined in package.json to install, build,
  
              1. npm install --production
                
- The build script allows an app to be compiled or perform any necessary tasks before being started. Even if an app does not require a build step, it is still expected that this script to be present. Use "build": "echo 'No build'" or equivalent to fulfil this requirement. The build script must complete successfully (exit with 0).
+
+The build script allows an app to be compiled or perform any necessary tasks before being started. Even if an app does not require a build step, it is still expected that this script to be present. Use "build": "echo 'No build'" or equivalent to fulfil this requirement. The build script must complete successfully (exit with 0).
+
 
               1. npm run build
-# After a successful build, VIP will start an app using the start script. Not all frameworks supply a start script, so an app may need to define one manually.
-#         1. npm start
+              
+
+After a successful build, VIP will start an app using the start script. Not all frameworks supply a start script, so an app may need to define one manually.
+
+
+              1. npm start
+              
 # Reference Documents:
      
