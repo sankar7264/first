@@ -21,18 +21,18 @@
 
 VIP uses the dependencies and scripts defined in package.json to install, build, and start an application. Make sure all necessary packages needed for an application to run are publicly accessible and are added as dependencies and not devDependencies.
         
- Only production dependencies are installed:
+ Only production dependencies are installed using the command:
  
              1. npm install --production
                
 
-The build script allows an app to be compiled or perform any necessary tasks before being started. Even if an app does not require a build step, it is still expected that this script to be present. Use "build": "echo 'No build'" or equivalent to fulfil this requirement. The build script must complete successfully (exit with 0).
+The build script allows an app to be compiled or perform any necessary tasks before being started. Even if an app does not require a build step, it is still expected that this script to be present. Use "build": "echo 'No build'" or equivalent to fulfil this requirement. The build script must complete successfully (exit with 0) using the command.
 
 
               1. npm run build
               
 
-After a successful build, VIP will start an app using the start script. Not all frameworks supply a start script, so an app may need to define one manually.
+After a successful build, VIP will start an app using the start script. Not all frameworks supply a start script, so an app may need to define one manually using the command.
 
 
               1. npm start
@@ -45,7 +45,7 @@ After a successful build, VIP will start an app using the start script. Not all 
               
 ## Manage or set the environment variables:
 
-   We can set the environment variables using VIP-CLI. To install VIP-CLI on local machine follow the steps given in VIP-CLI document. Once the        [VPI CLI](https://docs.wpvip.com/technical-references/vip-cli/installing-vip-cli/) is install we can use following commands to set the environment variable.
+   We can set the environment variables using VIP-CLI. To install VIP-CLI on local machine follow the steps given in VIP-CLI document. Once the        [VPI CLI](https://docs.wpvip.com/technical-references/vip-cli/installing-vip-cli/) is install we can use following commands to set and manage the environment variable.
      
              vip app list
             
@@ -61,8 +61,7 @@ After a successful build, VIP will start an app using the start script. Not all 
              vip app list command will provide the list & details of all applications.
 
              
-             vip @{application_name}.{environment} config envvar get-all
-
+             vip @{application_name}.{environment} config envvar get-all 
              e.g. #$ vip @node-presidio-gov.develop config envvar get-all
              ┌────────────────────────────────┬───────────────────────────────────────────────┐
              │ name                           │ value                                         │
@@ -72,12 +71,12 @@ After a successful build, VIP will start an app using the start script. Not all 
              │ NEXT_PUBLIC_SERVER_URL         │ https://node-presidio-gov-develop.go-vip.net  │
              └────────────────────────────────┴───────────────────────────────────────────────┘
              
-             vip @{application_name}.{environment} config envvar get-all command will give the list of all previously set 
+             vip @{application_name}.{environment} config envvar get-all : gives the list of all previously set 
              environment variables.
 
-             To add or update the environment variables we can use following command.
        
-             vip @{application_name}.{environment} config envvar set {variable_name}
+             vip @{application_name}.{environment} config envvar set {variable_name} :To add or update the environment
+             variables 
              
 
              e.g. #$ vip @node-presidio-gov.develop config envvar set NEXT_PUBLIC_SERVER_URL 
@@ -90,7 +89,7 @@ After a successful build, VIP will start an app using the start script. Not all 
             
             
             
-            For more details follow the instructions or guidelines provided by WordPress VIP
+For more details follow the instructions or guidelines provided by WordPress VIP
            
  ### Reference Documents:
         
