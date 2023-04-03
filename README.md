@@ -1,20 +1,20 @@
-# Application Deployment & VIP CLI
+## Application Deployment & VIP CLI
  Deployments on WordPress VIP are fully automated and depend on the code merge in the respective branch. Deployment starts when updates pushed to an environment’s repository were detected.
-# Deployment is divided into 3 steps:
-# Prepare
+### Deployment is divided into 3 steps:
+###   Prepare
 
         . Detect merge event to ‘develop’,  'preprod' or 'production' branch.
         . Build queue.
         . Initializing build environment.
         . Cloning git repository.
 
- # Build
+ ###   Build
 
         . Build starts.
         . Run all the scripts defined in package.json 
         . Build complete successfully (exit with 0).
 
-# Deployment
+###   Deployment
 
         . Deployment starts.
         . The application deployed successfully.   
@@ -37,5 +37,88 @@ After a successful build, VIP will start an app using the start script. Not all 
 
               1. npm start
               
-# Reference Documents:
+### Reference Documents:
+
+  [Deployments](https://docs.wpvip.com/technical-references/vip-dashboard/deployments-panel/)
+              
+  [Node.js on VIP](https://docs.wpvip.com/technical-references/node-js/#h-exposing-a-health-check-endpoint)
+              
+## Manage or set the environment variables:
+
+   We can set the environment variables using VIP-CLI. To install VIP-CLI on local machine follow the steps given in VIP-CLI document. Once the        [VPI CLI](https://docs.wpvip.com/technical-references/vip-cli/installing-vip-cli/) is install we can use following commands to set the environment variable.
+     
+             vip app list
+            
+             e.g. #$ vip app list
+             ┌──────┬───────────────────┬─────────────────────────────┐
+             │ id   │ name              │ repo                        │
+             ├──────┼───────────────────┼─────────────────────────────┤
+             │ 6958 │ node-presidio-gov │ wpcomvip/node-presidio-gov  │
+             ├──────┼───────────────────┼─────────────────────────────┤
+             │ 6767 │ wpvip-presidio    │ wpcomvip/wpvip-presidio-gov │
+             └──────┴───────────────────┴─────────────────────────────┘
+       
+             vip app list command will provide the list & details of all applications.
+
+             
+             vip @{application_name}.{environment} config envvar get-all
+
+             e.g. #$ vip @node-presidio-gov.develop config envvar get-all
+             ┌────────────────────────────────┬───────────────────────────────────────────────┐
+             │ name                           │ value                                         │
+             ├────────────────────────────────┼───────────────────────────────────────────────┤
+             │ NEXT_PUBLIC_WORDPRESS_ENDPOINT │ https://wpvip-presidio-gov-develop.go-vip.net │
+             ├────────────────────────────────┼───────────────────────────────────────────────┤
+             │ NEXT_PUBLIC_SERVER_URL         │ https://node-presidio-gov-develop.go-vip.net  │
+             └────────────────────────────────┴───────────────────────────────────────────────┘
+             
+             vip @{application_name}.{environment} config envvar get-all command will give the list of all previously set 
+             environment variables.
+
+             To add or update the environment variables we can use following command.
+       
+             vip @{application_name}.{environment} config envvar set {variable_name}
+             
+
+             e.g. #$ vip @node-presidio-gov.develop config envvar set NEXT_PUBLIC_SERVER_URL 
+             For multiline input, use the --from-file option.
+
+            ? Enter the value for NEXT_PUBLIC_SERVER_URL: https://node-presidio-gov-develop.go-vip.net
+            ✔ Please confirm the input value above (y/N) · true
+            Successfully set environment variable "NEXT_PUBLIC_SERVER_URL"
+            Important: Updates to environment variables will not be available until the application’s next deploy.
+            
+            
+            
+            For more details follow the instructions or guidelines provided by WordPress VIP
+           
+ ### Reference Documents:
+        
+  [Manage Environmental Varaible](https://docs.wpvip.com/how-tos/manage-environment-variables/#managing-environment-variables-with-vip-cli)
+  
+  [VIP Config Envvar Set](https://docs.wpvip.com/vip/config/envvar/set/)
+  
+  [VIP Config Envvar list](https://docs.wpvip.com/vip/config/envvar/list/)
+       
+       
+       
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+    
      
