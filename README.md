@@ -97,7 +97,8 @@ For more details follow the instructions or guidelines provided by WordPress VIP
   
   [VIP Config Envvar Set](https://docs.wpvip.com/vip/config/envvar/set/)
   
-  [VIP Config Envvar list](https://docs.wpvip.com/vip/config/envvar/list/)
+  ![image](https://user-images.githubusercontent.com/109987485/229742289-545372ea-a297-4700-a60d-b89563dfc5ef.png)
+[VIP Config Envvar list](https://docs.wpvip.com/vip/config/envvar/list/)
        
        
        
