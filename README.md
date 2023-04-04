@@ -97,7 +97,7 @@ For more details follow the instructions or guidelines provided by WordPress VIP
   
   [VIP Config Envvar Set](https://docs.wpvip.com/vip/config/envvar/set/)
   
-  ![image](https://user-images.githubusercontent.com/109987485/229742289-545372ea-a297-4700-a60d-b89563dfc5ef.png)<img src="/path/to/wordpress-logo.png" alt="WordPress Logo" width=20" height="20">
+  ![ alt="WordPress Logo" width="5" height="20">](https://user-images.githubusercontent.com/109987485/229742289-545372ea-a297-4700-a60d-b89563dfc5ef.png)
 
 [VIP Config Envvar list](https://docs.wpvip.com/vip/config/envvar/list/)
        
