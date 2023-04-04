@@ -97,10 +97,7 @@ For more details follow the instructions or guidelines provided by WordPress VIP
   
    <img src="https://user-images.githubusercontent.com/109987485/229742289-545372ea-a297-4700-a60d-b89563dfc5ef.png" width="18" height="18">[VIP Config Envvar Set](https://docs.wpvip.com/vip/config/envvar/set/)
   
-  <img src="https://user-images.githubusercontent.com/109987485/229742289-545372ea-a297-4700-a60d-b89563dfc5ef.png" width="18" height="18">[VIP Config Envvar list](https://docs.wpvip.com/vip/config/envvar/list/)
-       
-       
-       
+  
               
               
               
